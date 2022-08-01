@@ -1,0 +1,31 @@
+source "https://rubygems.org"
+gemspec
+
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-remote-theme"
+
+# gem "jekyll', '~> 3.9"
+# gem "kramdown-parser-gfm", "~> 1.1.0"
+# gem "webrick", "~> 1.7"
+
+# gem "jekyll-theme-quickstart", git: "https://github.com/MichaelCurrin/jekyll-theme-quickstart"
+
+# group :jekyll_plugins do
+#   gem "jekyll-remote-theme", "~> 0.4.2"
+# end
+
+# source "https://rubygems.org"
+
+
+# gem "github-pages", group: :jekyll_plugins
+# gem "jekyll-remote-theme"
+
+# bundle update
+
+# gem "jekyll-text-theme", path: "../"
+
+# source "https://rubygems.org"
+
+
+# gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
+# gem "jekyll-github-metadata", :github => "jekyll/github-metadata"
