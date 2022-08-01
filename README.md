@@ -1,0 +1,1 @@
+# awesome-tm1-planning-analytics
