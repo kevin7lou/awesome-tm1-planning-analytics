@@ -1,5 +1,5 @@
 <div align="center">
-	<a href="https://kevin7lou.github.io/awesome-tm1-planning-analytics/"><img width="250" height="250" src="img/tm1-pa-logo.png" alt="pyds"></a>
+	<a href="https://kevin7lou.github.io/awesome-tm1-planning-analytics/"><img width="269" height="226" src="img/tm1-pa-logo.png" alt="tm1pa"></a>
 	<br>
 	<br>
 	<br>
