@@ -14,9 +14,8 @@ baseurl: "/awesome-tm1-planning-analytics" # the subpath of your site, e.g. /blo
 url: "https://kevin7lou.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # destination: ./docs
 
-# permalink: pretty
-# exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
-# , "docs/tests/"]
+permalink: pretty
+exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "docs/tests/"]
 
 # Enable or disable the site search
 # Supports true (default) or false
