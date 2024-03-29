@@ -1,7 +1,7 @@
 # Welcome to Awesome TM1 Planning Analytics
 
 <figure markdown="span">
-  ![TM1-PA Logo](assets/images/tm1-pa-logo.png){ width="350" }
+  ![TM1-PA Logo](images/tm1-pa-logo.png){ width="350" }
 </figure>
 
 <figure markdown="span">
