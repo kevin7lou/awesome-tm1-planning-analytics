@@ -1,32 +1,86 @@
 # Project information
 site_name: Awesome TM1 Planning Analytics
-site_description: "MkDocs Material Boilerplate (Starter Kit) - Deploy documentation to hosting platforms (Netlify, GitHub Pages, GitLab Pages, and AWS Amplify Console) with Docker, pipenv, and GitHub Actions."
+site_url: https://awesome-tm1-planning-analytics.netlify.app/
 site_author: "Kevin Lou"
-site_url: "https://mkdocs.peaceiris.com/"
-
-# Copyright
-copyright: Copyright &copy; 2022 - 2024 Kevin Lou
+site_description: >-
+  Collection and Sharings of best practice, toolkits
+  about IBM Planning Analytics (formerly Cognos TM1)
 
 # Repository
 repo_name: kevin7lou/awesome-tm1-planning-analytics
 repo_url: https://github.com/kevin7lou/awesome-tm1-planning-analytics
 # edit_uri: "https://github.com/peaceiris/mkdocs-material-boilerplate/edit/main/docs_sample"
 
+# Copyright
+copyright: Copyright &copy; 2022 - 2024 Kevin Lou
+
+
 # Configuration
 docs_dir: "docs"
 theme:
   name: "material"
   language: "en"
-  shortcuts:
-    help: 191 # ?
-    next: 78 # n
-    previous: 80 # p
-    search: 83 # s
+#   custom_dir: material/overrides
+#   features:
+#     - announce.dismiss
+#     - content.action.edit
+#     - content.action.view
+#     - content.code.annotate
+#     - content.code.copy
+#     # - content.code.select
+#     # - content.footnote.tooltips
+#     # - content.tabs.link
+#     - content.tooltips
+#     # - header.autohide
+#     # - navigation.expand
+#     - navigation.footer
+#     - navigation.indexes
+#     # - navigation.instant
+#     # - navigation.instant.prefetch
+#     # - navigation.instant.progress
+#     # - navigation.prune
+#     - navigation.sections
+#     - navigation.tabs
+#     # - navigation.tabs.sticky
+#     - navigation.top
+#     - navigation.tracking
+#     - search.highlight
+#     - search.share
+#     - search.suggest
+#     - toc.follow
+#     # - toc.integrate
   palette:
-    primary: "blue"
-    accent: "blue"
-  features:
-    - tabs
+  # Palette toggle for automatic mode
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: material/brightness-auto
+      name: Switch to light mode
+  # Palette toggle for light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: blue
+    accent: indigo
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  # Palette toggle for dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: blue
+    accent: indigo
+    toggle:
+      icon: material/brightness-4
+      name: Switch to system preference
+  # shortcuts:
+  #   help: 191 # ?
+  #   next: 78 # n
+  #   previous: 80 # p
+  #   search: 83 # s
+  # palette:
+  #   primary: "blue"
+  #   accent: "blue"
+  # features:
+  #   - tabs
   #font:
   #text: 'Ubuntu'
   #code: 'Ubuntu Mono'
@@ -34,22 +88,100 @@ theme:
   #logo: 'images/logo.svg'
   #favicon: 'assets/images/favicon.ico'
 
-# Extensions
-markdown_extensions:
-  - admonition
-  - codehilite
-  - footnotes
-  - mdx_math:
-      enable_dollar_delimiter: true
-  - toc:
-      permalink: true
-      separator: "_"
+#   font:
+#     text: Roboto
+#     code: Roboto Mono
+#   favicon: assets/favicon.png
+#   icon:
+#     logo: logo
 
+# Plugins
 plugins:
+  # - blog
   - search:
       separator: '[\s\-\.]+'
-      lang:
-        - en
+      # '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+
+# # Hooks
+# hooks:
+#   - material/overrides/hooks/shortcodes.py
+#   - material/overrides/hooks/translations.py
+
+# # Additional configuration
+# extra:
+#   status:
+#     new: Recently added
+#     deprecated: Deprecated
+#   analytics:
+#     provider: google
+#     property: !ENV GOOGLE_ANALYTICS_KEY
+#   social:
+#     - icon: fontawesome/brands/github
+#       link: https://github.com/squidfunk
+#     - icon: fontawesome/brands/docker
+#       link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+#     - icon: fontawesome/brands/python
+#       link: https://pypi.org/project/mkdocs-material/
+#     - icon: fontawesome/brands/mastodon
+#       link: https://fosstodon.org/@squidfunk
+#     - icon: fontawesome/brands/twitter
+#       link: https://twitter.com/squidfunk
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - codehilite
+  - toc:
+      permalink: true
+      # separator: "_"
+  - mdx_math:
+      enable_dollar_delimiter: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  # - pymdownx.emoji:
+  #     emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  #     emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  # - pymdownx.tabbed:
+  #     alternate_style: true
+  #     combine_header_slug: true
+  #     slugify: !!python/object/apply:pymdownx.slugs.slugify
+  #       kwds:
+  #         case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 # Customization
 extra_javascript:
