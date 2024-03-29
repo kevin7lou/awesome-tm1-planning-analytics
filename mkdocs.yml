@@ -101,8 +101,8 @@ plugins:
   - search:
       separator: '[\s\-\.]+'
       # '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  - minify:
-      minify_html: true
+  # - minify:
+  #     minify_html: true
 
 # # Hooks
 # hooks:
@@ -141,8 +141,8 @@ markdown_extensions:
   - toc:
       permalink: true
       # separator: "_"
-  - mdx_math:
-      enable_dollar_delimiter: true
+  # - mdx_math:
+  #     enable_dollar_delimiter: true
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
